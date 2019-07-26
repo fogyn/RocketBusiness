@@ -22,6 +22,8 @@ public class MvcConfig implements WebMvcConfigurer {
                 .addResourceLocations("file://" + uploadPath + "/");
         registry.addResourceHandler("/static/**")
                 .addResourceLocations("classpath");
+        registry.addResourceHandler("/css/**")
+                .addResourceLocations("/WEB-INF/resources/static/css/");
     }
 }
 
